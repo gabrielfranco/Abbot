@@ -1,42 +1,63 @@
 <!DOCTYPE html>
-<!--
-    Licensed to the Apache Software Foundation (ASF) under one
-    or more contributor license agreements.  See the NOTICE file
-    distributed with this work for additional information
-    regarding copyright ownership.  The ASF licenses this file
-    to you under the Apache License, Version 2.0 (the
-    "License"); you may not use this file except in compliance
-    with the License.  You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing,
-    software distributed under the License is distributed on an
-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-     KIND, either express or implied.  See the License for the
-    specific language governing permissions and limitations
-    under the License.
--->
 <html>
     <head>
         <meta charset="utf-8" />
         <meta name="format-detection" content="telephone=no" />
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-        <link rel="stylesheet" type="text/css" href="css/index.css" />
-        <title>Hello World</title>
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <title>Abbot</title>
+        <link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/Main.css">
+		<!-- MODERNIZR -->
+		<script src="js/lib/ui/modernizr-2.6.2.min.js"></script>
     </head>
     <body>
-        <div class="app">
-            <h1>Apache Cordova</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
-            </div>
-        </div>
-        <script type="text/javascript" src="cordova-2.7.0.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
+    	
+    	<div id="pages">
+		</div>
         <script type="text/javascript">
-            app.initialize();
-        </script>
+			var isAndroid = navigator.userAgent.toLowerCase().match(/android/);
+			var isIOS = navigator.userAgent.toLowerCase().match(/iphone/) || navigator.userAgent.toLowerCase().match(/ipad/);
+			
+			<!-- CORDOVA -->
+			if (isAndroid) {
+				document.write('<script charset="utf-8" src="cordova\/android\/cordova-2.7.0.js"><\/script>');
+				
+			} else if (isIOS) {
+				document.write('<script charset="utf-8" src="cordova\/ios\/cordova-2.7.0.js"><\/script>');
+			}
+		</script>
+		<!-- JQUERY -->
+		<script src="js/lib/ui/jquery-1.7.1.min.js"></script>
+		
+		<!-- LIBS -->
+		<script src="js/lib/pxloader/PxLoader.js"></script>
+		<script src="js/lib/pxloader/PxLoaderImage.js"></script>
+		<script src="js/lib/ui/underscore-min.js"></script>
+		<script src="js/lib/ui/backbone-min.js"></script>
+		<script src="js/lib/ui/jquery.url.js"></script>
+		<script src="js/lib/ui/iscroll-min.js"></script>
+		<script src="js/lib/ui/jquery.blockUI.js"></script>
+	
+		<!-- VIEW MANAGER -->
+		<script src="js/lib/ui/View.js"></script>
+		<script src="js/lib/ui/ViewManager.js"></script>
+	
+		<!-- Views -->
+		<script src="js/views/PageManager.js"></script>
+		<script src="js/views/login/LoginView.js"></script>
+		
+		<!-- MODELS -->
+		<script src="js/models/Server.js"></script>
+		<script src="js/models/App.js"></script>
+		
+		<!-- UTILS -->
+		<script src="js/utils/utils.js"></script>
+		<script src="js/utils/helper.js"></script>
+	
+		<!-- MAIN -->
+		<script src="js/main.js"></script>
+		
     </body>
 </html>
