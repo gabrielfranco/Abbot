@@ -15,7 +15,7 @@ InstructionsView = apps.ui.View.extend({
     },
     
     events : {
-        'touchend #clickExample' : 'onClickExample'
+        'touchend #homeEmpezar' : 'onHomeEmpezar'
     },
 
     activate : function() {
@@ -24,7 +24,7 @@ InstructionsView = apps.ui.View.extend({
         }
     },
     
-    onClickExample : function(){
-        App.alert('touch Example called');
+    onHomeEmpezar : function(){
+        this.parent.setView('login');
     }
 });

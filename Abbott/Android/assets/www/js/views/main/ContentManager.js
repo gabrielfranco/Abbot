@@ -20,12 +20,15 @@ ContentManager = apps.ui.ViewManager.extend({
                 stages:                new StagesView({parent:this,backButton:false,title:'Etapas de desarrollo',months:true,icon:"arrow_up.png", menuButton:true, secondButton:false}),
                 stagedetail:           new StageDetailView({parent:this,backButton:true,title:'Detalle etapas',months:false,icon:false, menuButton:false, secondButton:false}),           
                 tips:                  new TipsView({parent:this,backButton:true,title:'Tips',months:false,icon:false, menuButton:false, secondButton:false}),
-                gallery:               new GalleryView({parent:this,backButton:false,title:'Diario',months:false,icon:"icon_create_gallery.png", menuButton:false, secondButton:"creategallery"})
+                gallery:               new GalleryView({parent:this,backButton:false,title:'Diario',months:false,icon:"icon_create_gallery.png", menuButton:false, secondButton:"creategallery"}),
+                creategallery:         new CreateGalleryView({parent:this,backButton:true,title:'Crear una galería',months:false,icon:false, menuButton:false, secondButton:false}),
+                editgallery:           new EditGalleryView({parent:this,backButton:true,title:'Editar',months:false,icon:false, menuButton:false, secondButton:false}),
+                photodetail:           new PhotoDetailView({parent:this,backButton:true,title:'(1 de 5)',months:false,icon:"icon_garbage.png", menuButton:false, secondButton:"deletegallery"}),
+                calendar:              new CalendarView({parent:this,backButton:false,title:'Calendario',months:false,icon:"icon_plus.png", menuButton:true, secondButton:"createevent"}),
+                eventdetail:           new DetailEventView({parent:this,backButton:true,title:'Evento',months:false,icon:"icon_edit.png", menuButton:true, secondButton:"editevent"}),
+                createevent:           new CreateEventView({parent:this,backButton:true,title:'Crear un evento',months:false,icon:false, menuButton:false, secondButton:false}),
+                editevent:             new EditEventView({parent:this,backButton:true,title:'Editar evento',months:false,icon:false, menuButton:false, secondButton:false})
         };
-    },
-    
-    events:{
-        
     },
     
     handleBackButton: function() {

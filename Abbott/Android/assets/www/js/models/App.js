@@ -81,7 +81,8 @@ _.extend(App, Backbone.Events, {
         //Initializes the Server Object
         this.server = new Server({host:App.config.ApiEndPoint});
         
-        this.pages.setView('login');
+        //TODO: Display instructions the first time user installs the app only.
+        this.pages.setView('instructions');
 
     },
 
