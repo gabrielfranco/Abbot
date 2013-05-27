@@ -31,7 +31,7 @@ _.extend(App, Backbone.Events, {
         /** This will hold all the app data */
         this.data = null;
 
-        /** This will hold the main PageManager which is a ViewManager */
+        /** This will hold the main MainPageManager which is a ViewManager */
         this.pages = null;
         
         /** This will hold the services calls*/
@@ -76,7 +76,7 @@ _.extend(App, Backbone.Events, {
         util.setBlockui();
 
         // Initialize the Page Manager
-        this.pages = new PageManager();
+        this.pages = new MainPageManager();
         
         //Initializes the Server Object
         this.server = new Server({host:App.config.ApiEndPoint});

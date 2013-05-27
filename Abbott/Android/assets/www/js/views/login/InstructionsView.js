@@ -1,17 +1,16 @@
-LoginView = apps.ui.View.extend({
+InstructionsView = apps.ui.View.extend({
 
     initialize : function(options) {
         apps.ui.View.prototype.initialize.call(this, options);
 
-        this.prefix = 'LoginView';
+        this.prefix = 'InstructionsView';
         util.log(this.prefix, 'initialize()');
 
-        this.el = $($('#loginTemplate', App.templates).html());
+        this.el = $($('#instructionsTemplate', App.templates).html());
 
         this.parent = options.parent;
         this.delegateEvents();
 
-        this.isConnecting = false;
         this.activated = false;
     },
     

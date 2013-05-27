@@ -1,17 +1,16 @@
-LoginView = apps.ui.View.extend({
+ForgotView = apps.ui.View.extend({
 
     initialize : function(options) {
         apps.ui.View.prototype.initialize.call(this, options);
 
-        this.prefix = 'LoginView';
+        this.prefix = 'ForgotView';
         util.log(this.prefix, 'initialize()');
 
-        this.el = $($('#loginTemplate', App.templates).html());
+        this.el = $($('#forgotTemplate', App.templates).html());
 
         this.parent = options.parent;
         this.delegateEvents();
 
-        this.isConnecting = false;
         this.activated = false;
     },
     

@@ -1,9 +1,9 @@
-PageManager = apps.ui.ViewManager.extend({
+MainPageManager = apps.ui.ViewManager.extend({
 	
 	initialize: function(options) {
 		apps.ui.ViewManager.prototype.initialize.call(this, options);
 		
-		this.prefix = 'PageManager';
+		this.prefix = 'MainPageManager';
 		util.log(this.prefix,'initialize()');
 		
 		this.el = $('#pages');
@@ -13,7 +13,10 @@ PageManager = apps.ui.ViewManager.extend({
 		this.delegateEvents();
 
 		this.views = {
-			login: 			new LoginView({parent:this})
+		    instructions:   new InstructionsView({parent:this}),
+			login: 			new LoginView({parent:this}),
+	        forgot:         new ForgotView({parent:this}),
+	        content:        new ContentView({parent:this})
 		};
 	},
 	
