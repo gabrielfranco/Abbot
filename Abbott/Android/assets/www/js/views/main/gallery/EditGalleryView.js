@@ -1,9 +1,9 @@
-EditGaleryView = apps.ui.View.extend({
+EditGalleryView = apps.ui.View.extend({
 
     initialize : function(options) {
         apps.ui.View.prototype.initialize.call(this, options);
 
-        this.prefix = 'EditGaleryView';
+        this.prefix = 'EditGalleryView';
         util.log(this.prefix, 'initialize()');
 
         this.el = $($('#EditGalleryTemplate', App.templates).html());

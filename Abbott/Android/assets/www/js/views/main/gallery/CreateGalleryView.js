@@ -1,12 +1,12 @@
-GaleryView = apps.ui.View.extend({
+CreateGalleryView = apps.ui.View.extend({
 
     initialize : function(options) {
         apps.ui.View.prototype.initialize.call(this, options);
 
-        this.prefix = 'GaleryView';
+        this.prefix = 'CreateGalleryView';
         util.log(this.prefix, 'initialize()');
 
-        this.el = $($('#GalleryTemplate', App.templates).html());
+        this.el = $($('#CreateGalleryTemplate', App.templates).html());
 
         this.parent = options.parent;
         this.delegateEvents();

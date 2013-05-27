@@ -20,7 +20,7 @@ ContentManager = apps.ui.ViewManager.extend({
                 stages:                new StagesView({parent:this,backButton:false,title:'Etapas de desarrollo',months:true,icon:"arrow_up.png", menuButton:true, secondButton:false}),
                 stagedetail:           new StageDetailView({parent:this,backButton:true,title:'Detalle etapas',months:false,icon:false, menuButton:false, secondButton:false}),           
                 tips:                  new TipsView({parent:this,backButton:true,title:'Tips',months:false,icon:false, menuButton:false, secondButton:false}),
-                diary:                 new DiaryView({parent:this,backButton:false,title:'Diario',months:false,icon:"icon_create_gallery.png", menuButton:false, secondButton:"creategallery"})
+                gallery:               new GalleryView({parent:this,backButton:false,title:'Diario',months:false,icon:"icon_create_gallery.png", menuButton:false, secondButton:"creategallery"})
         };
     },
     

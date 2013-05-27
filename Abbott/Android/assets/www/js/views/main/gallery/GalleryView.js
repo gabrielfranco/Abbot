@@ -1,12 +1,12 @@
-DiaryView = apps.ui.View.extend({
+GalleryView = apps.ui.View.extend({
 
     initialize : function(options) {
         apps.ui.View.prototype.initialize.call(this, options);
 
-        this.prefix = 'DiaryView';
+        this.prefix = 'GalleryView';
         util.log(this.prefix, 'initialize()');
 
-        this.el = $($('#DiaryTemplate', App.templates).html());
+        this.el = $($('#GalleryTemplate', App.templates).html());
 
         this.parent = options.parent;
         this.delegateEvents();
