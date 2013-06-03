@@ -10,7 +10,7 @@ apps.ui.ViewManager = apps.ui.View.extend({
 	
 	toString: function() {
 		return '[apps.ui.ViewManager]';
-	},
+	},	
 	
 	clear: function() {
 		util.log(this.prefix,'clear()');

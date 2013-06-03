@@ -15,12 +15,16 @@ GalleryView = apps.ui.View.extend({
     },
     
     events : {
-
+        'touchend #createGallery' : 'onCreateGallery'
     },
 
     activate : function() {
         if (this.activated == false) {
             this.activated = true;
         }
+    },
+    
+    onCreateGallery : function(){
+        this.parent.setView('creategallery');
     }
 });

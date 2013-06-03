@@ -33,6 +33,7 @@ ContentView = apps.ui.View.extend({
     
     onMainHeaderButton : function(){
         //TODO:
+//		this.parent.setView('login');
     },
     
     onSecondHeaderButton : function(){

@@ -13,6 +13,8 @@ ContentManager = apps.ui.ViewManager.extend({
         this.delegateEvents();
 
         this.views = {
+			  // login:new LoginView({}),
+			
                 mybaby:                new MyBabyView({parent:this,backButton:false,title:'Mi bebé',months:false,icon:"icon_settings.png", menuButton:true, secondButton: 'editprofile'}),
                 registerprofile:       new RegisterProfileView({parent:this,backButton:true,title:'Usuario Nuevo',months:false,icon:false, menuButton:false, secondButton:false}),
                 terms:                 new TermsView({parent:this,backButton:true,title:'Términos y condiciones',months:false,icon:false, menuButton:false, secondButton:false}),

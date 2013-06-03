@@ -42,6 +42,18 @@ _.extend(App, Backbone.Events, {
 
         /** This will hold all page/view html templates */
         this.templates = null;
+
+        /** This will hold the user id in order to make requests after login */
+        this.idUser = null;
+        
+        /** This will hold the user object info */
+        this.userInfo = {};
+        
+        /** This will hold the tips array info */
+        this.tipsArray = [];
+        
+        /** This will hold the galleries array object info */
+        this.galleriesObject = [];
         
         // Init Templates
         this.initTemplates(callback);
@@ -97,7 +109,7 @@ _.extend(App, Backbone.Events, {
 
     onBackButton : function() {
         util.log(this.prefix, '!!!! onBackButton() !!!! blockReturn: ' + this.blockReturn);
-        if(this.blockReturn == true){
+        if(this.blockReturn == true && this.serverError == false){
             return;
         }
         var handled = false;
